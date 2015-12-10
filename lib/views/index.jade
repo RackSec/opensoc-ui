@@ -27,9 +27,12 @@ html
         <center><h3>You must enable javascript to use Kibana</h3></center>
       </div>
     </noscript>
-    <!--<link rel="stylesheet" ng-href="css/bootstrap.{{dashboard.current.style||'dark'}}.min.css">-->
-    <link rel="stylesheet" ng-href="css/bootstrap.{{dashboard.current.style||'dark'}}.min.css">
+    <title>Kibana 3{{dashboard.current.title ? " - "+dashboard.current.title : ""}}</title>
+    <link rel="stylesheet" href="css/timepicker.css">
+    <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="stylesheet" href="css/normalize.min.css">
     <link rel="stylesheet" href="css/bootstrap-responsive.min.css">
+    <link rel="stylesheet" href="css/kibana.min.css">
     <link rel="stylesheet" href="css/font-awesome.min.css">
 
     <div ng-cloak ng-repeat='alert in dashAlerts.list' class="alert-{{alert.severity}} dashboard-notice" ng-show="$last">
